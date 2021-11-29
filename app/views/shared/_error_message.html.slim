@@ -1,0 +1,5 @@
+- if object.errors.present?
+  .alert.alert-warning
+    - object.errors.full_messages.each do |message|
+      ul
+        li = message

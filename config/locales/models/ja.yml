@@ -1,4 +1,19 @@
 ja:
   activerecord:
-    models:
-  attributes:
+    models: 
+      user: 'ユーザー'
+      post: '掲示板'
+    attributes:
+      user:
+        id: 'ID'
+        name: '氏名'
+        email: 'メールアドレス'
+        password: 'パスワード'
+        password_confirmation: 'パスワード(確認)'
+        avatar: 'アバター'
+        role: '権限'
+        self_introduction: '自己紹介'
+        
+  attributes:    
+        created_at: '作成日時'
+        updated_at: '更新日時'

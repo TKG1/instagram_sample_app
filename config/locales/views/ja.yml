@@ -1,2 +1,24 @@
 ja:
-  
+  defaults:
+    title: 'マッチョ'
+    footer: '筋トレ　2021'
+    login_alert: 'ログインをしてください'
+    
+  users:
+    new:
+      title: 'ユーザー登録'
+    create:
+      user_success: 'ユーザー登録をしました'
+      user_fail: 'ユーザー登録に失敗しました'
+  user_sessions:
+    new:
+      title: 'ログイン'
+    create:
+      login_success: 'ログインしました'
+      login_fail: 'ログインに失敗しました'
+    destroy:
+      title: 'ログアウト'
+      logout_success: 'ログアウトしました'
+  posts:
+    index:
+      title: '掲示板一覧'

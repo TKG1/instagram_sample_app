@@ -1,0 +1,12 @@
+header
+  nav.navbar.navbar-expand-lg.navbar-light.bg-light
+    .container-fluid
+      .navbar-nav.me-auto.mb-2.mb-lg-0
+        .nav-item
+          = link_to t('defaults.title'), root_path, class: 'nav-link active ms-3'
+        .nav-item
+          = link_to '掲示板一覧', '#', class: 'nav-link'
+        .nav-item
+          = link_to '掲示板一覧', '#', class: 'nav-link'
+        .nav-item
+          = link_to t('user_sessions.destroy.title'), logout_path, method: :delete, class: 'nav-link'

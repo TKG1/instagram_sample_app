@@ -10,13 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_11_22_051433) do
+ActiveRecord::Schema.define(version: 2021_11_22_122836) do
 
   create_table "users", force: :cascade do |t|
-    t.string "first_name", null: false
-    t.string "last_name", null: false
+    t.string "name", null: false
     t.string "email", null: false
-    t.string "password", null: false
+    t.string "crypted_password"
+    t.string "salt"
     t.string "avatar"
     t.integer "role", default: 0, null: false
     t.text "self_introduction"

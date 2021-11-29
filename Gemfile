@@ -63,6 +63,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 #add
 gem 'bootstrap'
+gem 'sorcery'
 gem 'slim-rails'
 gem 'html2slim'
 gem 'rails-i18n'
