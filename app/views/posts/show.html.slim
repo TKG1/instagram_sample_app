@@ -12,7 +12,16 @@ h1 = t('.title')
       = render 'favorites/unfavorite', post: @post
     = @post.favorites.length
     p.card-text = @post.content
+    p = @post.created_at
     .card-link
       =link_to icon('fas', 'file-alt'), post_path(@post), class: 'me-2'
       =link_to icon('fas', 'edit'), edit_post_path(@post), class: 'me-2'
       =link_to icon('fas', 'trash-alt'), post_path(@post), method: :delete
+
+
+h5.mt-3 コメント
+.card.text-center.mt-3
+  - if @comments.present?
+    = render partial: 'comments/comment', collection: @comments
+.comment-form
+  = render 'comments/form', post: @post

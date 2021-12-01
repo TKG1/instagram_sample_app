@@ -1,0 +1,5 @@
+.comment-name
+  strong = comment.user.name
+.comment-content
+  = comment.content
+  = link_to icon('fas', 'trash'), post_comment_path(comment.post, comment), method: :delete
