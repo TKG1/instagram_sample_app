@@ -5,7 +5,12 @@ h1 = t('.title')
     p.card-name = @post.user.name
     h5.card-title = @post.title
     = image_tag @post.post_image.url, size: "300x200", class: 'img-fluid'
-    p いいね 
+    p いいね
+    - if current_user.is_favorite?(@post)
+      = render 'favorites/favorite', post: @post
+    - else
+      = render 'favorites/unfavorite', post: @post
+    = @post.favorites.length
     p.card-text = @post.content
     .card-link
       =link_to icon('fas', 'file-alt'), post_path(@post), class: 'me-2'
