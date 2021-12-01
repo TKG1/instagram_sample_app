@@ -21,6 +21,8 @@
 /storage/*
 !/storage/.keep
 
+public/uploads
+
 /node_modules
 /yarn-error.log
 
@@ -32,3 +34,5 @@
 
 # Ignore vendor/bundle files
 /vendor/bundle
+
+

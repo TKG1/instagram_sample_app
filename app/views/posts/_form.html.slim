@@ -1,0 +1,13 @@
+= form_with model: post, local: true do |f|
+  = render 'shared/error_message', object: f.object
+  .mb-3  
+    = f.label :title, class: 'form-label'
+    = f.text_field :title, class: 'form-control'
+  .mb-3  
+    = f.label :content, class: 'form-label'
+    = f.text_area :content, row: 10, class: 'form-control'
+  .mb-3  
+    = f.label :post_image, class: 'form-label'
+    = f.file_field :post_image, class: 'form-control'
+    = f.hidden_field :post_image_cache
+  = f.submit t('defaults.create'), class: 'btn btn-primary'

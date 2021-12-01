@@ -5,8 +5,8 @@ header
         .nav-item
           = link_to t('defaults.title'), root_path, class: 'nav-link active ms-3'
         .nav-item
-          = link_to '掲示板一覧', '#', class: 'nav-link'
+          = link_to '掲示板一覧', posts_path, class: 'nav-link'
         .nav-item
-          = link_to '掲示板一覧', '#', class: 'nav-link'
+          = link_to '掲示板新規作成', new_post_path, class: 'nav-link'
         .nav-item
           = link_to t('user_sessions.destroy.title'), logout_path, method: :delete, class: 'nav-link'

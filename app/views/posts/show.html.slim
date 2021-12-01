@@ -1,0 +1,13 @@
+h1 = t('.title')
+
+.card.text-center
+  .card-body
+    p.card-name = @post.user.name
+    h5.card-title = @post.title
+    = image_tag @post.post_image.url, size: "300x200", class: 'img-fluid'
+    p いいね 
+    p.card-text = @post.content
+    .card-link
+      =link_to icon('fas', 'file-alt'), post_path(@post), class: 'me-2'
+      =link_to icon('fas', 'edit'), edit_post_path(@post), class: 'me-2'
+      =link_to icon('fas', 'trash-alt'), post_path(@post), method: :delete

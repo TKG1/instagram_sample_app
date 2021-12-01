@@ -1,2 +1,6 @@
 h1 = t('.title')
-
+.row.row-cols-auto
+  - if @posts.present?
+    = render @posts
+  - else
+    p = t('.no_posts')
