@@ -19,7 +19,7 @@ h1 = t('.title')
       =link_to icon('fas', 'trash-alt'), post_path(@post), method: :delete
 
 
-h5.mt-3 コメント
+h5.mt-3 = Comment.model_name.human
 .card.text-center.mt-3
   - if @comments.present?
     = render partial: 'comments/comment', collection: @comments

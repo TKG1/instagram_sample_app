@@ -1,5 +1,5 @@
-= form_with url: post_comments_path(post), local: true do |f|
+= form_with model: Comment.new, url: post_comments_path(post), local: true do |f|
   .mb-3
     = f.label :content, class: 'form-label'
     = f.text_field :content, class: 'form-control'
-  = f.submit 'コメント', class: 'btn btn-primary'
+  = f.submit t('defaults.comment'), class: 'btn btn-primary'

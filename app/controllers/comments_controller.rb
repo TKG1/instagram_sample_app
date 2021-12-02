@@ -1,11 +1,11 @@
 class CommentsController < ApplicationController
   def create
-    comment = current_user.comments.build(content: params[:content], post_id: params[:post_id])
+    comment = current_user.comments.build(content: params[:comment][:content], post_id: params[:post_id])
     if comment.save
-      flash[:success] = 'コメントしました'
+      flash[:success] = t('.success')
       redirect_back(fallback_location: root_path)
     else
-      flash[:danger] = 'コメントできませんでした'
+      flash[:danger] = t('.fail')
       redirect_back(fallback_location: root_path)
     end
   end
@@ -13,6 +13,7 @@ class CommentsController < ApplicationController
   def destroy
     comment = current_user.comments.find(params[:id])
     comment.destroy!
+    flash[:success] = t('.success')
     redirect_back(fallback_location: root_path)
   end
 end

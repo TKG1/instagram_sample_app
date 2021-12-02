@@ -6,6 +6,7 @@ ja:
     create: '新規作成'
     register: '新規登録'
     favorite: 'いいね'
+    comment: 'コメントする'
 
   users:
     new:
@@ -35,9 +36,15 @@ ja:
     create:
       success: "%{title}を作成しました"
       fail: '作成に失敗しました'
+
     update:
       success: "%{title}を編集しました"
       fail: '編集に失敗しました'
     destroy:
       success: "%{title}を削除しました"
-    
+  comments:
+    create:
+      success: "コメントしました"
+      fail:  "コメントできませんでした"
+    destroy:
+      success: "コメントを削除しました"
