@@ -12,8 +12,8 @@ ja:
     new:
       title: 'ユーザー登録'
     create:
-      user_success: 'ユーザー登録をしました'
-      user_fail: 'ユーザー登録に失敗しました'
+      success: 'ユーザー登録をしました'
+      fail: 'ユーザー登録に失敗しました'
   user_sessions:
     new:
       title: 'ログイン'

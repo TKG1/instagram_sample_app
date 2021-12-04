@@ -5,7 +5,8 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
-    @comments = @post.comments
+    @comments = @post.comments.includes(:user).order(created_at: :desc)
+    @comment = Comment.new
   end
 
   def new
@@ -27,7 +28,7 @@ class PostsController < ApplicationController
   end
 
   def update
-    @post = Post.find(params[:id])
+    @post = current_user.posts.find(params[:id])
     if @post.update(post_params)
       redirect_to post_path(@post), success: t('.success', title: @post.title)
     else
@@ -37,7 +38,7 @@ class PostsController < ApplicationController
   end
 
   def destroy
-    post = Post.find(params[:id])
+    post = current_user.posts.find(params[:id])
     post.destroy!
     redirect_to posts_path, success: t('.success', title: post.title)
   end

@@ -8,6 +8,9 @@
     = f.text_area :content, row: 10, class: 'form-control'
   .mb-3  
     = f.label :post_image, class: 'form-label'
-    = f.file_field :post_image, class: 'form-control'
+    = f.file_field :post_image, onchange: 'previewImage()', class: 'form-control mb-3'
+    = image_tag post.post_image.url,
+                  id: 'preview',
+                  size: '300x200'
     = f.hidden_field :post_image_cache
   = f.submit t('defaults.create'), class: 'btn btn-primary'
