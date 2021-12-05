@@ -1,1 +1,1 @@
-= link_to icon('far', 'heart'), post_favorites_path(post), method: :post
+= link_to icon('far', 'heart'), post_favorites_path(post), id: "js-unfavorite-button-#{post.id}", remote: true, method: :post
